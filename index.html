@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La libreta | Tu diario visual en papel</title>
+    <!-- Fuentes creativas y limpias -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #FDFBF7; /* Tono papel antiguo/crema */
+            --card-bg: #FFFFFF;
+            --primary: #FF6B6B; /* Coral suave acuarela */
+            --primary-hover: #EE5253;
+            --accent-yellow: #FFD93D;
+            --accent-teal: #48DBFB;
+            --text-main: #2D3436;
+            --text-muted: #636E72;
+            --border-sketch: 2px solid #2D3436;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            /* Patrón sutil estilo textura de papel */
+            background-image: radial-gradient(#E5E0D8 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 2rem 1.5rem 1rem;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Caveat', cursive;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-decoration: none;
+            display: inline-block;
+            transform: rotate(-2deg);
+            transition: transform 0.2s ease;
+        }
+
+        .logo:hover {
+            transform: rotate(1deg) scale(1.05);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .card {
+            max-width: 580px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 3rem 2.5rem;
+            border-radius: 28px;
+            /* Estilo "hecho a mano" con sombras suaves y borde orgánico */
+            border: var(--border-sketch);
+            box-shadow: 6px 6px 0px #2D3436, 0 15px 30px rgba(0,0,0,0.03);
+            text-align: center;
+            position: relative;
+        }
+
+        /* Pegatina decorativa superior */
+        .tape {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-1deg);
+            width: 130px;
+            height: 32px;
+            background-color: rgba(255, 217, 61, 0.7);
+            border: 1px dashed #B2BEC3;
+            backdrop-filter: blur(2px);
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #FFEAA7;
+            color: #D63031;
+            font-family: 'Caveat', cursive;
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            border: 1.5px solid #2D3436;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        h1 .highlight {
+            background: linear-gradient(120deg, #FFD93D 0%, #FFD93D 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 35%;
+            background-position: 0 88%;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* Formulario estilizado */
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        @media (min-width: 500px) {
+            .signup-form {
+                flex-direction: row;
+            }
+        }
+
+        input[type="email"] {
+            flex: 1;
+            padding: 1rem 1.25rem;
+            border: var(--border-sketch);
+            border-radius: 16px;
+            font-size: 1rem;
+            outline: none;
+            background-color: #FAFAFA;
+            transition: all 0.2s ease;
+        }
+
+        input[type="email"]:focus {
+            background-color: #FFFFFF;
+            box-shadow: 3px 3px 0px #2D3436;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: var(--border-sketch);
+            padding: 1rem 1.8rem;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 3px 3px 0px #2D3436;
+            transition: all 0.15s ease;
+        }
+
+        button:hover {
+            background-color: var(--primary-hover);
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0px #2D3436;
+        }
+
+        button:active {
+            transform: translate(1px, 1px);
+            box-shadow: 2px 2px 0px #2D3436;
+        }
+
+        /* Bloques de características estilo "tarjetas de notas" en cuadrícula 2x2 */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 2px dashed #E5E0D8;
+        }
+
+        @media (max-width: 480px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-card {
+            background: #FDFBF7;
+            padding: 1rem;
+            border-radius: 16px;
+            border: 1.5px solid #2D3436;
+            text-align: left;
+        }
+
+        .feature-card.f1 { transform: rotate(-1deg); }
+        .feature-card.f2 { transform: rotate(1deg); }
+        .feature-card.f3 { transform: rotate(-1.5deg); }
+        .feature-card.f4 { transform: rotate(1.2deg); }
+
+        .feature-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .feature-card p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-family: 'Caveat', cursive;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Cambia "Garabato" por el nombre que más te guste -->
+        <a href="#" class="logo"><span>Decidiendo nombre...</span></a>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="tape"></div>
+            
+            <span class="badge">✦ Apúntate a la Lista Beta ✦</span>
+            
+            <h1>Desconecta, <span class="highlight">pinta </span> y comparte sin presión.</h1>
+            
+            <p class="subtitle">
+                Una red social pensada para quienes amamos pintar en papel como hobbie. Sin algoritmos tóxicos, sin exigencias profesionales. Solo tu cuaderno, retos diarios y una comunidad que te apoya.
+            </p>
+
+            <!-- Enlace de Mailchimp integrado correctamente -->
+            <form class="signup-form" action="https://github.us11.list-manage.com/subscribe/post?u=ead66b78d48801788b2b1b8fa&amp;id=2c58651770&amp;f_id=005c93e0f0" method="POST" target="_blank">
+                <input type="email" name="EMAIL" placeholder="Tu email..." required>
+                <button type="submit">¡Quiero entrar!</button>
+            </form>
+
+            <div class="features">
+                <div class="feature-card f1">
+                    <h3>Papel y lápiz</h3>
+                    <p>Sube la foto de tu cuaderno tal cual, sin filtros complejos.</p>
+                </div>
+                <div class="feature-card f2">
+                    <h3>Retos diarios</h3>
+                    <p>Ideas sencillas cada día para soltar la mano en 5 min.</p>
+                </div>
+                <div class="feature-card f3">
+                    <h3>Cero presión</h3>
+                    <p>Un espacio seguro para principiantes y entusiastas.</p>
+                </div>
+                <div class="feature-card f4">
+                    <h3>Inspiración real</h3>
+                    <p>Descubre el proceso de otras personas que pintan por disfrutar.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Hecho a mano para quienes disfrutan el proceso ✨</p>
+    </footer>
+
+</body>
+</html>

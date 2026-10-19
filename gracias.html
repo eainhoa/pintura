@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por unirte! | La libreta</title>
+    <!-- Fuentes creativas y limpias -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #FDFBF7; /* Tono papel antiguo/crema */
+            --card-bg: #FFFFFF;
+            --primary: #FF6B6B; /* Coral suave acuarela */
+            --primary-hover: #EE5253;
+            --accent-yellow: #FFD93D;
+            --text-main: #2D3436;
+            --text-muted: #636E72;
+            --border-sketch: 2px solid #2D3436;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            background-image: radial-gradient(#E5E0D8 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 2rem 1.5rem 1rem;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Caveat', cursive;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-decoration: none;
+            display: inline-block;
+            transform: rotate(-2deg);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .card {
+            max-width: 520px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 3rem 2.5rem;
+            border-radius: 28px;
+            border: var(--border-sketch);
+            box-shadow: 6px 6px 0px #2D3436, 0 15px 30px rgba(0,0,0,0.03);
+            text-align: center;
+            position: relative;
+        }
+
+        .tape {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-1deg);
+            width: 130px;
+            height: 32px;
+            background-color: rgba(255, 217, 61, 0.7);
+            border: 1px dashed #B2BEC3;
+            backdrop-filter: blur(2px);
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #FFEAA7;
+            color: #D63031;
+            font-family: 'Caveat', cursive;
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            border: 1.5px solid #2D3436;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background-color: #FDFBF7;
+            border: 1.5px solid #2D3436;
+            border-radius: 16px;
+            padding: 1.25rem;
+            text-align: left;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            transform: rotate(-0.5deg);
+        }
+
+        .info-box strong {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: var(--primary-hover);
+        }
+
+        .btn-tiktok {
+            display: inline-block;
+            background-color: #2D3436;
+            color: white;
+            border: var(--border-sketch);
+            padding: 1rem 1.8rem;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 3px 3px 0px #FF6B6B;
+            transition: all 0.15s ease;
+        }
+
+        .btn-tiktok:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0px #FF6B6B;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-family: 'Caveat', cursive;
+            font-size: 1.3rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="tape"></div>
+            
+            <span class="badge">✦ ¡Registro completado! ✦</span>
+            
+            <h1>¡Nos vemos muy pronto!</h1>
+            
+            <p class="subtitle">
+                Ya estás en la lista prioritaria para probar la beta en cuanto abramos las puertas.
+            </p>
+
+            <div class="info-box">
+                <strong>Un último detalle importante:</strong>
+                Por si acaso, revisa tu bandeja de entrada (y la carpeta de spam o promociones) para asegurarte de que te lleguen nuestras novedades.
+            </div>
+
+            <!-- Cambia la URL por el enlace directo a tu perfil de TikTok -->
+            <a href="https://www.tiktok.com/@eainhoa" target="_blank" class="btn-tiktok">
+                Sigueme en TikTok
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Hecho a mano para quienes disfrutan el proceso ✨</p>
+    </footer>
+
+</body>
+</html>
