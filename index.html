@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La libreta | Tu diario visual en papel</title>
+    <title>Tu diario visual en papel</title>
     <!-- Fuentes creativas y limpias -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -130,8 +130,34 @@
         p.subtitle {
             color: var(--text-muted);
             font-size: 1.05rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             line-height: 1.6;
+        }
+
+        /* Caja de contexto personal / nota del proyecto */
+        .story-box {
+            background-color: #FDFBF7;
+            border: 1.5px solid #2D3436;
+            border-radius: 18px;
+            padding: 1.25rem 1.5rem;
+            text-align: left;
+            margin-bottom: 2rem;
+            transform: rotate(-0.5deg);
+        }
+
+        .story-box strong {
+            display: block;
+            font-size: 0.95rem;
+            color: #D63031;
+            font-family: 'Caveat', cursive;
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .story-box p {
+            font-size: 0.9rem;
+            color: var(--text-main);
+            line-height: 1.5;
         }
 
         /* Formulario estilizado */
@@ -259,6 +285,14 @@
             <p class="subtitle">
                 Una red social pensada para quienes amamos pintar en papel como hobbie. Sin algoritmos tóxicos, sin exigencias profesionales. Solo tu cuaderno, retos diarios y una comunidad que te apoya.
             </p>
+
+            <!-- Bloque de contexto del proyecto -->
+            <div class="story-box">
+                <strong>Un proyecto que está naciendo...</strong>
+                <p>
+                    Esto empezó como un reto personal subiendo mi proceso diario pintando en papel sin ser artista profesional. Al ver a gente buscando un espacio tranquilo para hacer lo mismo, he decidido crear esta comunidad desde cero. Si te apuntas hoy, serás de las primeras personas en probar la beta y dar forma a este rincón.
+                </p>
+            </div>
 
             <!-- Enlace de Mailchimp integrado correctamente -->
             <form class="signup-form" action="https://github.us11.list-manage.com/subscribe/post?u=ead66b78d48801788b2b1b8fa&amp;id=2c58651770&amp;f_id=005c93e0f0" method="POST" target="_blank">
