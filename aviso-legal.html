@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso Legal y Privacidad | eam Art Studio</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="img/yo/aemlogoazul.png">
+    <link rel="apple-touch-icon" href="img/yo/aemlogoazul.png">
+
+    <!-- Hoja de Estilos Externa -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F9E8A2',
+                        sand: '#B4E1EB',
+                        terracotta: '#78A4CB',
+                        'terracotta-dark': '#95BDD7',
+                        charcoal: '#23211E',
+                        sage: '#95BDD7',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- ENCABEZADO -->
+    <header class="bg-[#F9E8A2]/95 border-b border-[#B4E1EB] sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="img/yo/logoazul.png" alt="eam Logo" class="h-6 sm:h-7 w-auto object-contain">
+                <span class="font-serif text-lg sm:text-xl font-bold tracking-tight text-charcoal">
+                    <span class="italic font-normal text-charcoal text-2xl">Studio</span>
+                </span>
+            </a>
+            <a href="index.html" class="text-xs sm:text-sm font-semibold text-charcoal hover:text-[#78A4CB] transition-colors flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+            </a>
+        </div>
+    </header>
+
+    <!-- CONTENIDO LEGAL -->
+    <main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto space-y-8">
+        
+        <div class="bg-white p-8 sm:p-12 rounded-3xl border border-[#B4E1EB] art-shadow space-y-6">
+            <div>
+                <h1 class="font-serif text-3xl font-bold text-charcoal mb-2">Aviso Legal y Política de Privacidad</h1>
+                <p class="text-xs text-charcoal/60">Información sobre la gestión de datos de este sitio web.</p>
+            </div>
+
+            <div class="space-y-3 text-sm text-charcoal/80 leading-relaxed">
+                <h2 class="font-serif text-lg font-bold text-charcoal">1. Responsable del Sitio Web</h2>
+                <p>
+                    El presente sitio web es gestionado por <strong>eam Art Studio</strong> (contacto a través del perfil de TikTok <a href="https://www.tiktok.com/@eainhoa" target="_blank" class="underline text-[#78A4CB]">@eainhoa</a>).
+                </p>
+
+                <h2 class="font-serif text-lg font-bold text-charcoal pt-3">2. Recogida de Datos y Finalidad</h2>
+                <p>
+                    Los correos electrónicos recogidos a través del formulario de suscripción son almacenados mediante la plataforma de email marketing <strong>Mailchimp</strong> (Intuit Inc.). La única finalidad es enviar a las personas interesadas novedades relativas al lanzamiento de proyectos artísticos, láminas y tienda online prevista para 2027.
+                </p>
+
+                <h2 class="font-serif text-lg font-bold text-charcoal pt-3">3. Consentimiento y Suscripción</h2>
+                <p>
+                    Al introducir tu correo y pulsar en "Quiero enterarme de todo", otorgas tu consentimiento expreso para formar parte de la lista de novedades. En cualquier momento puedes solicitar tu baja o eliminar tus datos utilizando el enlace de cancelación ("Unsubscribe") incluido al final de cada correo o contactando por mensaje directo.
+                </p>
+
+                <h2 class="font-serif text-lg font-bold text-charcoal pt-3">4. Propiedad Intelectual</h2>
+                <p>
+                    Todos los diseños, obras, fotografías y textos presentes en eam Art Studio están protegidos por derechos de autor y propiedad intelectual. Queda prohibida su copia o distribución sin autorización previa.
+                </p>
+            </div>
+
+            <div class="pt-4 border-t border-[#B4E1EB] flex justify-between items-center text-xs text-charcoal/60">
+                <span>Última actualización: 2026</span>
+                <a href="index.html" class="text-[#78A4CB] font-semibold hover:underline">Volver</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="py-6 text-center text-xs text-charcoal/50 border-t border-[#B4E1EB]/60">
+        <p>&copy; 2026 eam Art Studio. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
